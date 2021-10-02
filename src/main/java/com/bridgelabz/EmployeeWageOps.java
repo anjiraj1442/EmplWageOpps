@@ -17,29 +17,42 @@ public class EmployeeWageOps {
         int FULL_TIME = 8;
         int PART_TIME = 4;
         int WAGE_PER_HR = 20;
+        int WORKING_DAYS = 20;
+
+        //variables
+        int totalWage = 0;
         int dailyWage = 0;
+
         //calculation
-        int empCheck = (int) Math.floor(Math.random() * 10) % 3;
-        switch (empCheck) {
-            case 1:
-                System.out.println("the Employee is Present" + IS_PRESENT);
-                dailyWage = (WAGE_PER_HR * FULL_TIME);
-                System.out.println("the daily Wage is " + dailyWage);
-                break;
+        for (int day = 0; day <= WORKING_DAYS; day++) {
 
-            case 2:
+            int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+            switch (empCheck) {
+                case 1:
 
-                System.out.println("the Employee Worked HalfDay" + HALF_TIME);
-                dailyWage = (WAGE_PER_HR * PART_TIME);
-                System.out.println("the daily Wage is " + dailyWage);
-                break;
 
-            default:
-                System.out.println("the Employee is Absent");
-                System.out.println("the daily Wage i " + dailyWage);
-                break;
+                    System.out.println("the Employee is Present" + IS_PRESENT);
+                    dailyWage = (WAGE_PER_HR * FULL_TIME);
+                    System.out.println("the daily Wage is " + dailyWage);
+                    break;
 
+                case 2:
+
+                    System.out.println("the Employee Worked HalfDay" + HALF_TIME);
+                    dailyWage = (WAGE_PER_HR * PART_TIME);
+                    System.out.println("the daily Wage is " + dailyWage);
+                    break;
+
+                default:
+                    System.out.println("the Employee is Absent");
+                    System.out.println("the daily Wage is " + dailyWage);
+                    break;
+
+            }
+            totalWage += dailyWage;
+            System.out.println("The total salary is " + totalWage);
         }
+
     }
 }
 
