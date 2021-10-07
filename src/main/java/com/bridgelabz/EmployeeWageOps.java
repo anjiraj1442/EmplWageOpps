@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 /**
- * Employee Wage Program By Using ops Concept day-9
+ * Employee Wage Program By Using ops Concept
  *
  * @author : Anji Raj Ardula
  * @version : 16.0
